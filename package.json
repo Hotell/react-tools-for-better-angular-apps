@@ -1,6 +1,6 @@
 {
   "name": "ro-sa",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "license": "MIT",
   "scripts": {
     "ng": "ng",
@@ -48,6 +48,6 @@
     "ts-node": "~4.1.0",
     "tslint": "~5.9.1",
     "tslint-config-prettier": "1.7.0",
-    "typescript": "~2.5.3"
+    "typescript": "2.7.1"
   }
 }
