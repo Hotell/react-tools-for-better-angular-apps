@@ -1,0 +1,13 @@
+{
+  "editor.formatOnSave": true,
+  "tslint.enable": true,
+  "tslint.autoFixOnSave": true,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 120,
+  "prettier.bracketSpacing": true,
+  "prettier.arrowParens": "always",
+  "javascript.format.enable": false,
+  "typescript.format.enable": false
+}
