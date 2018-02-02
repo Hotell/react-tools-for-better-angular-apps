@@ -55,6 +55,11 @@
   },
   "defaults": {
     "styleExt": "css",
-    "component": {}
+    "component": {
+      "inlineStyle": true,
+      "inlineTemplate": true,
+      "flat": true,
+      "changeDetection": "OnPush"
+    }
   }
 }
