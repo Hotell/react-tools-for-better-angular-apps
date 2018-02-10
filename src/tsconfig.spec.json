@@ -5,13 +5,10 @@
     "baseUrl": "./",
     "module": "commonjs",
     "types": [
-      "jasmine",
-      "node"
+      "node",
+      "jest"
     ]
   },
-  "files": [
-    "test.ts"
-  ],
   "include": [
     "**/*.spec.ts",
     "**/*.d.ts"

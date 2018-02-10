@@ -13,7 +13,9 @@ describe('AppComponent', () => {
     async(() => {
       const fixture = TestBed.createComponent(AppComponent);
       const app = fixture.debugElement.componentInstance;
+
       expect(app).toBeTruthy();
+      expect(fixture).toMatchSnapshot();
     })
   );
   it(
@@ -21,6 +23,7 @@ describe('AppComponent', () => {
     async(() => {
       const fixture = TestBed.createComponent(AppComponent);
       const app = fixture.debugElement.componentInstance;
+
       expect(app.title).toEqual('app');
     })
   );
@@ -30,7 +33,9 @@ describe('AppComponent', () => {
       const fixture = TestBed.createComponent(AppComponent);
       fixture.detectChanges();
       const compiled = fixture.debugElement.nativeElement;
+
       expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+      expect(fixture).toMatchSnapshot();
     })
   );
 });
