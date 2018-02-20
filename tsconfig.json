@@ -23,5 +23,11 @@
       "dom"
     ],
     "pretty": true
+  },
+  "angularCompilerOptions": {
+    "fullTemplateTypeCheck": true,
+    "skipMetadataEmit": true,
+    "strictInjectionParameters": true,
+    "preserveWhitespaces": false
   }
 }
