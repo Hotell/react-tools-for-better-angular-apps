@@ -9,11 +9,19 @@
     "experimentalDecorators": true,
     "target": "es5",
     "typeRoots": [
+      "types",
       "node_modules/@types"
     ],
+    "baseUrl": ".",
+    "paths": {
+      "testcafe-angular-selectors": [
+        "types/testcafe-angular-selectors"
+      ]
+    },
     "lib": [
       "es2017",
       "dom"
-    ]
+    ],
+    "pretty": true
   }
 }

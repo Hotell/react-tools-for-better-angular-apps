@@ -1,14 +1,17 @@
+// import { waitForAngular } from 'testcafe-angular-selectors';
+
 import { AppPage } from './app.po';
 
-describe('ro-sa App', () => {
-  let page: AppPage;
+const page = new AppPage();
 
-  beforeEach(() => {
-    page = new AppPage();
-  });
+fixture('ro-sa App').beforeEach(async (t) => {
+  // await waitForAngular();
+});
 
-  it('should display welcome message', () => {
-    page.navigateTo();
-    expect(page.getParagraphText()).toEqual('Welcome to app!');
-  });
+test('should display welcome message', async (t) => {
+  await page.navigateTo();
+
+  const paragraphText = await page.getParagraphText();
+
+  await t.expect(paragraphText).contains('Welcome to app!');
 });

@@ -7,7 +7,8 @@
     "types": []
   },
   "exclude": [
-    "test.ts",
+    "setup-jest.ts",
+    "jest-global-mocks.ts",
     "**/*.spec.ts"
   ]
 }

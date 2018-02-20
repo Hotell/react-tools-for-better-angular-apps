@@ -14,7 +14,7 @@
       "index": "index.html",
       "main": "main.ts",
       "polyfills": "polyfills.ts",
-      "test": "test.ts",
+      "test": "",
       "tsconfig": "tsconfig.app.json",
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
@@ -29,11 +29,7 @@
       }
     }
   ],
-  "e2e": {
-    "protractor": {
-      "config": "./protractor.conf.js"
-    }
-  },
+  "e2e": {},
   "lint": [
     {
       "project": "src/tsconfig.app.json",

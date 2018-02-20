@@ -1,3 +1,4 @@
+// @TODO: try to add ts-check
 module.exports = {
   globals: {
     'ts-jest': {
