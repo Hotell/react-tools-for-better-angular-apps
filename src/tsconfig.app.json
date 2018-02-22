@@ -9,6 +9,7 @@
   "exclude": [
     "setup-jest.ts",
     "jest-global-mocks.ts",
-    "**/*.spec.ts"
+    "**/*.spec.ts",
+    "**/*.stories.ts"
   ]
 }

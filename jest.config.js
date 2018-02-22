@@ -20,7 +20,6 @@ module.exports = {
   //     'environments/(.*)': '<rootDir>/src/environments/$1',
   //   },
   //   transformIgnorePatterns: ['node_modules/(?!@ngrx)'],
-  mapCoverage: true,
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/src/.*(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
