@@ -11,12 +11,26 @@
     "test:coverage": "jest --coverage",
     "e2e": "testcafe chrome e2e/**/*.e2e-spec.ts",
     "e2e:ci": "testcafe all e2e/**/*.e2e-spec.ts --app 'yarn start' --app-init-delay 4000",
-    "lint": "ng lint --format codeFrame",
+    "lint": "ng lint --format codeFrame --fix",
     "format": "prettier {src,e2e}/**/*.{ts,tsx,json,md,scss,css,less} --write",
-    "style": "yarn format && yarn lint --fix",
+    "style": "yarn format && yarn lint",
+    "verify": "yarn style && yarn test",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "storybook": "start-storybook -p 9009 -s src/assets",
-    "storybook:build": "build-storybook  -o .storybook-out"
+    "storybook:build": "build-storybook  -o .storybook-out",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "precommit": "lint-staged",
+    "prepush": "yarn verify"
+  },
+  "lint-staged": {
+    "{src,e2e}/**/*.{js,jsx,ts,tsx}": [
+      "yarn lint",
+      "git add"
+    ],
+    "{src,e2e}/**/*.{js,jsx,ts,tsx,css,scss,html,md}": [
+      "prettier --write",
+      "git add"
+    ]
   },
   "private": true,
   "dependencies": {
@@ -49,8 +63,11 @@
     "@types/node": "~6.0.60",
     "babel-core": "6.26.0",
     "codelyzer": "4.1.0",
+    "commitlint": "6.1.0",
+    "husky": "0.14.3",
     "jest": "22.4.0",
     "jest-preset-angular": "5.1.0",
+    "lint-staged": "7.0.0",
     "prettier": "1.10.2",
     "testcafe": "0.18.6",
     "testcafe-angular-selectors": "0.3.0",
