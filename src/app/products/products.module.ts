@@ -4,6 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { ProductsComponent } from './products.component';
 
+// services
+import * as fromServices from './services';
+
 export const ROUTES: Routes = [
   {
     path: '',
@@ -24,6 +27,7 @@ export const ROUTES: Routes = [
 
 @NgModule({
   imports: [CommonModule, RouterModule.forChild(ROUTES)],
+  providers: [...fromServices.services],
   declarations: [ProductsComponent],
 })
 export class ProductsModule {}
