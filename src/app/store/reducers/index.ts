@@ -1,26 +1,17 @@
-import { combineReducers } from 'redux';
+import { ReducersMapObject } from 'redux';
 
-import * as fromActions from '../actions';
+import * as fromRouter from './router.reducer';
+import * as fromCount from './count.reducer';
 
-export interface AppState {
-  count: number;
+export interface State {
+  router: fromRouter.State;
+  count: fromCount.State;
 }
-const initialState: AppState = {
-  count: 0,
+
+export const reducer: ReducersMapObject = {
+  router: fromRouter.reducer,
+  count: fromCount.reducer,
 };
 
-const reducer = (state = initialState, action: fromActions.Action) => {
-  switch (action.type) {
-    case fromActions.INC:
-      return { ...state, count: state.count + 1 };
-    case fromActions.DEC:
-      return { ...state, count: state.count - 1 };
-    default:
-      return state;
-  }
-};
-
-export const getCount = (state: AppState) => state.count;
-
-// export default combineReducers({ root: reducer });
-export default reducer;
+export const getCount = (state: State) => state.count;
+export const getRouter = (state: State) => state.router;

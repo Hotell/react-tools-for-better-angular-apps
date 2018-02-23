@@ -38,6 +38,7 @@
   },
   "private": true,
   "dependencies": {
+    "@angular-redux/router": "7.0.0",
     "@angular-redux/store": "7.1.0",
     "@angular/animations": "5.2.6",
     "@angular/common": "5.2.6",
@@ -51,6 +52,7 @@
     "core-js": "2.5.3",
     "json-server": "0.12.1",
     "redux": "3.7.2",
+    "reselect": "3.0.1",
     "rxjs": "5.5.6",
     "zone.js": "0.8.20"
   },

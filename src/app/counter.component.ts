@@ -2,7 +2,6 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { select, NgRedux } from '@angular-redux/store';
 import { Observable } from 'rxjs/Observable';
 
-import { AppState, getCount } from './store';
 import * as fromRoot from './store';
 
 @Component({
@@ -16,8 +15,8 @@ import * as fromRoot from './store';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CounterComponent implements OnInit {
-  constructor(private ngRedux: NgRedux<AppState>) {}
-  count$ = this.ngRedux.select(getCount);
+  constructor(private ngRedux: NgRedux<fromRoot.State>) {}
+  count$ = this.ngRedux.select(fromRoot.getCount);
 
   increment() {
     this.ngRedux.dispatch(new fromRoot.IncAction());

@@ -1,5 +1,4 @@
-export * from './config';
-export { AppState, getCount } from './reducers';
 export * from './actions';
+export { getCount, getRouter, State } from './reducers';
 
 export { StoreModule } from './store.module';
