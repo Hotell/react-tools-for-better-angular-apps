@@ -13,6 +13,7 @@ import { Component } from '@angular/core';
         <a routerLink="products" routerLinkActive="active">Products</a>
       </div>
       <div class="app__container">
+        <app-counter></app-counter>
         <router-outlet></router-outlet>
       </div>
       <div class="app__footer">
