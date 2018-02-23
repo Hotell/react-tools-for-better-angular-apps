@@ -29,9 +29,9 @@ export const DROP_ANIMATION = trigger('drop', [
     <div class="pizza-display">
       <div class="pizza-display__base">
         <img src="/assets/img/pizza.svg">
-        <img 
+        <img
           *ngFor="let topping of pizza?.toppings; index as i;"
-          src="/assets/img/toppings/{{ topping.name }}.svg" 
+          src="/assets/img/toppings/{{ topping.name }}.svg"
           [style.zIndex]="i"
           class="pizza-display__topping"
           @drop>

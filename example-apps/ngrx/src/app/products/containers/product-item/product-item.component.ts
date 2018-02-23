@@ -13,7 +13,7 @@ import { Topping } from '../../models/topping.model';
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['product-item.component.scss'],
   template: `
-    <div 
+    <div
       class="product-item">
       <pizza-form
         [pizza]="pizza$ | async"

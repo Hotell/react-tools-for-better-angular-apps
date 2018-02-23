@@ -14,7 +14,7 @@ describe('Pizzas Selectors', () => {
 
   const pizza1: Pizza = {
     id: 1,
-    name: "Fish 'n Chips",
+    name: 'Fish \'n Chips',
     toppings: [
       { id: 1, name: 'fish' },
       { id: 2, name: 'chips' },

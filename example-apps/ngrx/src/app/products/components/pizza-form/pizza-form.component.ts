@@ -7,13 +7,7 @@ import {
   SimpleChanges,
   ChangeDetectionStrategy,
 } from '@angular/core';
-import {
-  FormControl,
-  FormGroup,
-  FormArray,
-  FormBuilder,
-  Validators,
-} from '@angular/forms';
+import { FormControl, FormGroup, FormArray, FormBuilder, Validators } from '@angular/forms';
 
 import { map } from 'rxjs/operators';
 
@@ -27,11 +21,11 @@ import { Topping } from '../../models/topping.model';
   template: `
     <div class="pizza-form">
       <form [formGroup]="form">
-      
+
         <label>
           <h4>Pizza name</h4>
-          <input 
-            type="text" 
+          <input
+            type="text"
             formControlName="name"
             placeholder="e.g. Pepperoni"
             class="pizza-form__input"
@@ -42,7 +36,7 @@ import { Topping } from '../../models/topping.model';
             <p>Pizza must have a name</p>
           </div>
         </label>
-      
+
         <ng-content></ng-content>
 
         <label>
@@ -103,10 +97,15 @@ export class PizzaFormComponent implements OnChanges {
     toppings: [[]],
   });
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder) {
+    this.updateToppings();
+  }
 
   get nameControl() {
-    return this.form.get('name') as FormControl;
+    return this.form.get('name');
+  }
+  get toppingsControl() {
+    return this.form.get('toppings');
   }
 
   get nameControlInvalid() {
@@ -118,15 +117,10 @@ export class PizzaFormComponent implements OnChanges {
       this.exists = true;
       this.form.patchValue(this.pizza);
     }
-    this.form
-      .get('toppings')
-      .valueChanges.pipe(
-        map(toppings => toppings.map((topping: Topping) => topping.id))
-      )
-      .subscribe(value => this.selected.emit(value));
   }
 
   createPizza(form: FormGroup) {
+    this.markFieldGroupChildrenAsTouched(form);
     const { value, valid } = form;
     if (valid) {
       this.create.emit(value);
@@ -143,5 +137,20 @@ export class PizzaFormComponent implements OnChanges {
   removePizza(form: FormGroup) {
     const { value } = form;
     this.remove.emit({ ...this.pizza, ...value });
+  }
+
+  private updateToppings() {
+    this.toppingsControl.valueChanges
+      .pipe(map(toppings => toppings.map((topping: Topping) => topping.id)))
+      .subscribe(value => this.selected.emit(value));
+  }
+
+  private markFieldGroupChildrenAsTouched(form: FormGroup) {
+    // @TODO note that will not mark children as touched! BUG REPORT !!!
+    form.markAsTouched();
+    // we need to explicitly iterate over controlls and mark them as touched
+    Object.values(form.controls).forEach(control => {
+      control.markAsTouched();
+    });
   }
 }

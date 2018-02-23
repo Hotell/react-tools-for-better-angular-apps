@@ -14,8 +14,7 @@ body {
   color: #333;
   background: #23292d;
   -webkit-font-smoothing: antialiased;
-  font: 300 16px/1.4 -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica,
-    Arial, sans-serif;
+  font: 300 16px/1.4 -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
   display: flex;
 }
 a {
@@ -43,8 +42,7 @@ h4 {
 
 @font-face {
   font-family: 'cornerstone';
-  src: url('../fonts/cornerstone.woff2') format('woff2'),
-    url('../fonts/cornerstone.woff') format('woff');
+  src: url('../fonts/cornerstone.woff2') format('woff2'), url('../fonts/cornerstone.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -60,6 +58,10 @@ h4 {
   font-family: 'cornerstone';
   cursor: pointer;
   transition: all 0.2s ease;
+}
+.btn:active {
+  box-shadow: inset 1px 1px 10px black;
+  color: #fff;
 }
 .btn__ok {
   background: #0f9675;

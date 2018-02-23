@@ -20,7 +20,7 @@ const PIZZA_TOPPINGS_ACCESSOR = {
   styleUrls: ['pizza-toppings.component.scss'],
   template: `
     <div class="pizza-toppings">
-      <div 
+      <div
         class="pizza-toppings-item"
         *ngFor="let topping of toppings;"
         (click)="selectTopping(topping)"
