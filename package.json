@@ -31,7 +31,7 @@
       "yarn lint",
       "git add"
     ],
-    "{src,e2e}/**/*.{js,jsx,ts,tsx,css,scss,html,md}": [
+    "{src,e2e}/**/*.{js,jsx,ts,tsx,css,scss,md}": [
       "prettier --write",
       "git add"
     ]
