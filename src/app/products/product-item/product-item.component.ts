@@ -38,7 +38,8 @@ export class ProductItemComponent implements OnInit {
   constructor(private store: NgRedux<fromStore.ProductsState>, private route: ActivatedRoute) {}
 
   ngOnInit() {
-    // const getSelectedPizza = fromStore.getSelectedPizza(this.route.snapshot);
+    const { pizzaId } = this.route.snapshot.params;
+    console.log({ pizzaId });
 
     const getSelectedPizza = createSelector(
       fromStore.getPizzasEntities,
@@ -50,7 +51,7 @@ export class ProductItemComponent implements OnInit {
     );
 
     const getPizzaVisualised = createSelector(
-      getSelectedPizza as any,
+      getSelectedPizza,
       fromStore.getToppingEntities,
       fromStore.getSelectedToppings,
       (pizza, toppingEntities, selectedToppings) => {
@@ -59,16 +60,18 @@ export class ProductItemComponent implements OnInit {
       }
     );
 
-    this.pizza$ = this.store.select(getSelectedPizza).pipe(
+    this.pizza$ = this.store.select(getSelectedPizza);
+    this.toppings$ = this.store.select(fromStore.getAllToppings);
+    this.visualise$ = this.store.select(getPizzaVisualised);
+
+    this.pizza$.pipe(
       tap((pizza: Pizza = null as any) => {
         const pizzaExists = Boolean(pizza && pizza.toppings);
         // tslint:disable-next-line:no-non-null-assertion
         const toppings = pizzaExists ? pizza.toppings!.map((topping) => topping.id!) : [];
         this.store.dispatch(new fromStore.VisualiseToppings(toppings));
       })
-    ) as Observable<Pizza>;
-    this.toppings$ = this.store.select(fromStore.getAllToppings);
-    this.visualise$ = this.store.select(getPizzaVisualised);
+    );
   }
 
   onSelect(event: number[]) {
