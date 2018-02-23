@@ -11,7 +11,11 @@ import * as fromRoot from './store';
     <button (click)="decrement()">dec</button>
     <p>Clicked {{ count$ | async }} times</p>
   `,
-  styles: [],
+  styles: [
+    `
+  :host{ display: block; }
+  `,
+  ],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CounterComponent implements OnInit {

@@ -1,4 +1,4 @@
 export * from './actions';
-export { getCount, getRouter, State } from './reducers';
+export { getCount, getRouter, getCurrentRoute } from './reducers';
 
-export { StoreModule } from './store.module';
+export { StoreModule, State } from './store.module';

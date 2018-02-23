@@ -6,7 +6,7 @@ import * as fromFeature from '../reducers';
 import * as fromToppings from '../reducers/toppings.reducer';
 
 export const getToppingsState = createSelector(
-  fromFeature.getProductsState,
+  fromFeature.selectProductsState,
   (state: fromFeature.ProductsState) => state.toppings
 );
 

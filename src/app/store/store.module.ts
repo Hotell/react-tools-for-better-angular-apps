@@ -5,17 +5,29 @@ import { NgModule } from '@angular/core';
 // our store and Angular.
 import { NgReduxModule, NgRedux, DevToolsExtension } from '@angular-redux/store';
 import { NgReduxRouterModule, routerReducer, NgReduxRouter } from '@angular-redux/router';
-import { combineReducers } from 'redux';
+import { combineReducers, Reducer } from 'redux';
 
 // Redux ecosystem stuff.
 import { createLogger } from 'redux-logger';
 
 // The top-level reducers and epics that make up our app's logic.
 import { createStoreFactory } from './config';
+import { registerFeatureStore } from './utils';
+
 import * as fromRoot from './reducers';
+import * as fromProducts from '../products/store';
+
 // import { RootEpics } from './epics';
 
-const rootReducer = combineReducers(fromRoot.reducer);
+export interface State extends fromRoot.State {
+  products: fromProducts.ProductsState;
+}
+
+const rootReducer = combineReducers<State>({
+  ...fromRoot.reducer,
+  ...registerFeatureStore(fromProducts.STORE_ID, fromProducts.reducers),
+});
+
 @NgModule({
   imports: [NgReduxModule, NgReduxRouterModule.forRoot()],
   // providers: [RootEpics],

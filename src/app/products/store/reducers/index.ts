@@ -9,9 +9,11 @@ export interface ProductsState {
   toppings: fromToppings.ToppingsState;
 }
 
+export const STORE_ID = 'products';
+
 export const reducers: ReducersMapObject = {
   pizzas: fromPizzas.reducer,
   toppings: fromToppings.reducer,
 };
 
-export const getProductsState = createFeatureSelector<ProductsState>('products');
+export const selectProductsState = createFeatureSelector<ProductsState>(STORE_ID);
