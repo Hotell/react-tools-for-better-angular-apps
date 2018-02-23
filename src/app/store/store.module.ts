@@ -17,7 +17,8 @@ import { registerFeatureStore } from './utils';
 import * as fromRoot from './reducers';
 import * as fromProducts from '../products/store';
 
-// import { RootEpics } from './epics';
+import { RouterEpics } from './epics';
+import { combineEpics, createEpicMiddleware } from 'redux-observable';
 
 export interface State extends fromRoot.State {
   products: fromProducts.ProductsState;
@@ -30,7 +31,7 @@ const rootReducer = combineReducers<State>({
 
 @NgModule({
   imports: [NgReduxModule, NgReduxRouterModule.forRoot()],
-  // providers: [RootEpics],
+  providers: [RouterEpics],
 })
 export class StoreModule {
   // constructor(
@@ -41,8 +42,10 @@ export class StoreModule {
   // )
   // rootEpics: RootEpics
 
-  constructor(public store: NgRedux<fromRoot.State>, ngReduxRouter: NgReduxRouter) {
-    store.provideStore(createStoreFactory(rootReducer));
+  constructor(public store: NgRedux<fromRoot.State>, ngReduxRouter: NgReduxRouter, routerEpics: RouterEpics) {
+    const epics = combineEpics(routerEpics.getEpic());
+    const epicsEnhancers = createEpicMiddleware(epics);
+    store.provideStore(createStoreFactory(rootReducer, undefined, [epicsEnhancers]));
     // Tell Redux about our reducers and epics. If the Redux DevTools
     // chrome extension is available in the browser, tell Redux about
     // it too.

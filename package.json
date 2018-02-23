@@ -52,6 +52,7 @@
     "core-js": "2.5.3",
     "json-server": "0.12.1",
     "redux": "3.7.2",
+    "redux-observable": "0.18.0",
     "reselect": "3.0.1",
     "rxjs": "5.5.6",
     "zone.js": "0.8.20"
