@@ -12,21 +12,22 @@ import { StoreModule /* reducers,  */ /* createStoreFactory, AppState */ } from 
 import { AppComponent } from './app.component';
 import { CounterComponent } from './counter.component';
 
-import { ProductsComponent } from './products/products.component';
+// import { ProductsComponent } from './products/products.component';
 import { ProductsModule } from './products/products.module';
 
 // routes
 export const ROUTES: Routes = [
   { path: '', pathMatch: 'full', redirectTo: 'products' },
-  {
-    path: 'products',
-    component: ProductsComponent,
-  },
+  //  when produtcs is lazy loaded
+  // {
+  //   path: 'products',
+  //   loadChildren: './products/products.module#ProductsModule',
+  // },
 ];
 
 @NgModule({
   declarations: [AppComponent, CounterComponent],
-  imports: [BrowserModule, DemoModule, RouterModule.forRoot(ROUTES), StoreModule, ProductsModule],
+  imports: [BrowserModule, DemoModule, ProductsModule, RouterModule.forRoot(ROUTES), StoreModule],
   providers: [],
   bootstrap: [AppComponent],
 })

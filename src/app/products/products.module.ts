@@ -15,19 +15,24 @@ import * as fromComponents from './components';
 
 export const ROUTES: Routes = [
   {
-    path: '',
-    // canActivate: [fromGuards.PizzasGuard],
-    component: ProductsComponent,
-  },
-  {
-    path: 'new',
-    //   canActivate: [fromGuards.PizzasGuard, fromGuards.ToppingsGuard],
-    component: ProductItemComponent,
-  },
-  {
-    path: ':pizzaId',
-    //   canActivate: [fromGuards.PizzaExistsGuards, fromGuards.ToppingsGuard],
-    component: ProductItemComponent,
+    path: 'products',
+    children: [
+      {
+        path: '',
+        // canActivate: [fromGuards.PizzasGuard],
+        component: ProductsComponent,
+      },
+      {
+        path: 'new',
+        //   canActivate: [fromGuards.PizzasGuard, fromGuards.ToppingsGuard],
+        component: ProductItemComponent,
+      },
+      {
+        path: ':pizzaId',
+        //   canActivate: [fromGuards.PizzaExistsGuards, fromGuards.ToppingsGuard],
+        component: ProductItemComponent,
+      },
+    ],
   },
 ];
 
