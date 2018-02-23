@@ -1,9 +1,12 @@
 import { TestBed, async } from '@angular/core/testing';
+import { RouterTestingModule } from '@angular/router/testing';
+
 import { AppComponent } from './app.component';
 describe('AppComponent', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
+        imports: [RouterTestingModule],
         declarations: [AppComponent],
       }).compileComponents();
     })
@@ -19,12 +22,13 @@ describe('AppComponent', () => {
     })
   );
   it(
-    `should have as title 'app'`,
+    `should have no properties`,
     async(() => {
       const fixture = TestBed.createComponent(AppComponent);
       const app = fixture.debugElement.componentInstance;
+      const actual = Object.keys(app);
 
-      expect(app.title).toEqual('app');
+      expect(actual).toEqual([]);
     })
   );
   it(
@@ -34,7 +38,7 @@ describe('AppComponent', () => {
       fixture.detectChanges();
       const compiled = fixture.debugElement.nativeElement;
 
-      expect(compiled.querySelector('h1').textContent).toContain('Welcome to app!');
+      expect(compiled.querySelector('img').alt).toContain('Ultimate Pizza');
       expect(fixture).toMatchSnapshot();
     })
   );
