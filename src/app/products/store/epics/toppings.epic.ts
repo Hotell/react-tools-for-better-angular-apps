@@ -19,10 +19,8 @@ export class ToppingsEpics implements EpicsService {
       switchMap(() => {
         return this.toppingsService
           .getToppings()
-          .pipe(
-            map((toppings) => new toppingsActions.LoadToppingsSuccess(toppings)),
-            catchError((error) => of(new toppingsActions.LoadToppingsFail(error)))
-          );
+          .then((toppings) => new toppingsActions.LoadToppingsSuccess(toppings))
+          .catch((error) => of(new toppingsActions.LoadToppingsFail(error)));
       })
     );
 }

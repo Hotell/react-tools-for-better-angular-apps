@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { HttpClientModule } from '@angular/common/http';
+import { AxiosModule } from '@modules/axios-http';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -41,7 +41,7 @@ export const ROUTES: Routes = [
 @NgModule({
   imports: [
     CommonModule,
-    HttpClientModule,
+    AxiosModule,
     BrowserAnimationsModule,
     ReactiveFormsModule,
     RouterModule.forChild(ROUTES),

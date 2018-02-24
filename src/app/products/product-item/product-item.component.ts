@@ -64,14 +64,16 @@ export class ProductItemComponent implements OnInit {
     this.toppings$ = this.store.select(fromStore.getAllToppings);
     this.visualise$ = this.store.select(getPizzaVisualised);
 
-    this.pizza$.pipe(
-      tap((pizza: Pizza = null as any) => {
-        const pizzaExists = Boolean(pizza && pizza.toppings);
-        // tslint:disable-next-line:no-non-null-assertion
-        const toppings = pizzaExists ? pizza.toppings!.map((topping) => topping.id!) : [];
-        this.store.dispatch(new fromStore.VisualiseToppings(toppings));
-      })
-    );
+    this.pizza$
+      .pipe(
+        tap((pizza: Pizza = null as any) => {
+          const pizzaExists = Boolean(pizza && pizza.toppings);
+          // tslint:disable-next-line:no-non-null-assertion
+          const toppings = pizzaExists ? pizza.toppings!.map((topping) => topping.id!) : [];
+          this.store.dispatch(new fromStore.VisualiseToppings(toppings));
+        })
+      )
+      .subscribe(console.log);
   }
 
   onSelect(event: number[]) {

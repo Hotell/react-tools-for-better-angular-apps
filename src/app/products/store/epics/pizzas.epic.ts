@@ -27,10 +27,8 @@ export class PizzasEpics implements EpicsService {
       switchMap(() => {
         return this.pizzaService
           .getPizzas()
-          .pipe(
-            map((pizzas) => new pizzaActions.LoadPizzasSuccess(pizzas)),
-            catchError((error) => of(new pizzaActions.LoadPizzasFail(error)))
-          );
+          .then((pizzas) => new pizzaActions.LoadPizzasSuccess(pizzas))
+          .catch((error) => new pizzaActions.LoadPizzasFail(error));
       })
     );
   createPizza$: Epic<any, {}> = (actions$) =>
@@ -39,10 +37,8 @@ export class PizzasEpics implements EpicsService {
       switchMap((pizza) => {
         return this.pizzaService
           .createPizza(pizza)
-          .pipe(
-            map((newPizza) => new pizzaActions.CreatePizzaSuccess(newPizza)),
-            catchError((error) => of(new pizzaActions.CreatePizzaFail(error)))
-          );
+          .then((newPizza) => new pizzaActions.CreatePizzaSuccess(newPizza))
+          .catch((error) => new pizzaActions.CreatePizzaFail(error));
       })
     );
   createPizzaSuccess$: Epic<any, {}> = (actions$) =>
@@ -60,10 +56,8 @@ export class PizzasEpics implements EpicsService {
       switchMap((pizza) => {
         return this.pizzaService
           .updatePizza(pizza)
-          .pipe(
-            map((updatedPizza) => new pizzaActions.UpdatePizzaSuccess(updatedPizza)),
-            catchError((error) => of(new pizzaActions.UpdatePizzaFail(error)))
-          );
+          .then((updatedPizza) => new pizzaActions.UpdatePizzaSuccess(updatedPizza))
+          .catch((error) => new pizzaActions.UpdatePizzaFail(error));
       })
     );
   removePizza$: Epic<any, {}> = (actions$) =>
@@ -72,10 +66,8 @@ export class PizzasEpics implements EpicsService {
       switchMap((pizza) => {
         return this.pizzaService
           .removePizza(pizza)
-          .pipe(
-            map(() => new pizzaActions.RemovePizzaSuccess(pizza)),
-            catchError((error) => of(new pizzaActions.RemovePizzaFail(error)))
-          );
+          .then(() => new pizzaActions.RemovePizzaSuccess(pizza))
+          .catch((error) => of(new pizzaActions.RemovePizzaFail(error)));
       })
     );
   handlePizzaSuccess$: Epic<any, {}> = (actions$) =>
