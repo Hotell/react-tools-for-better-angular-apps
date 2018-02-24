@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ProductsComponent } from './products.component';
 import { ProductItemComponent } from './product-item/product-item.component';
@@ -38,7 +39,13 @@ export const ROUTES: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, HttpClientModule, ReactiveFormsModule, RouterModule.forChild(ROUTES)],
+  imports: [
+    CommonModule,
+    HttpClientModule,
+    BrowserAnimationsModule,
+    ReactiveFormsModule,
+    RouterModule.forChild(ROUTES),
+  ],
   providers: [...fromServices.services, ...fromGuards.guards],
   declarations: [ProductsComponent, ProductItemComponent, ...fromComponents.components],
 })
