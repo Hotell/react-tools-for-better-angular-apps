@@ -5,7 +5,7 @@
   "prettier.singleQuote": true,
   "prettier.semi": true,
   "prettier.trailingComma": "es5",
-  "prettier.printWidth": 120,
+  "prettier.printWidth": 100,
   "prettier.bracketSpacing": true,
   "prettier.arrowParens": "always",
   "javascript.format.enable": false,
