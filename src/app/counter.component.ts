@@ -7,6 +7,9 @@ import * as fromRoot from './store';
 @Component({
   selector: 'app-counter',
   template: `
+    <button (click)="goBack()">back</button>
+    <button (click)="goForward()">forward</button>
+    <hr>
     <button (click)="increment()">inc</button>
     <button (click)="decrement()">dec</button>
     <p>Clicked {{ count$ | async }} times</p>
@@ -22,6 +25,12 @@ export class CounterComponent implements OnInit {
   constructor(private ngRedux: NgRedux<fromRoot.State>) {}
   count$ = this.ngRedux.select(fromRoot.getCount);
 
+  goBack() {
+    this.ngRedux.dispatch(new fromRoot.Back());
+  }
+  goForward() {
+    this.ngRedux.dispatch(new fromRoot.Forward());
+  }
   increment() {
     this.ngRedux.dispatch(new fromRoot.IncAction());
   }

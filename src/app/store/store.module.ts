@@ -8,6 +8,7 @@ import { NgReduxRouterModule, routerReducer, NgReduxRouter } from '@angular-redu
 import { combineReducers, Reducer } from 'redux';
 
 // Redux ecosystem stuff.
+import { combineEpics, createEpicMiddleware } from 'redux-observable';
 import { createLogger } from 'redux-logger';
 
 // The top-level reducers and epics that make up our app's logic.
@@ -17,8 +18,7 @@ import { registerFeatureStore } from './utils';
 import * as fromRoot from './reducers';
 import * as fromProducts from '../products/store';
 
-import { RouterEpics } from './epics';
-import { combineEpics, createEpicMiddleware } from 'redux-observable';
+import { EpicsModule, RootEpic } from './epics.module';
 
 export interface State extends fromRoot.State {
   products: fromProducts.ProductsState;
@@ -30,38 +30,19 @@ const rootReducer = combineReducers<State>({
 });
 
 @NgModule({
-  imports: [NgReduxModule, NgReduxRouterModule.forRoot()],
-  providers: [RouterEpics],
+  imports: [NgReduxModule, NgReduxRouterModule.forRoot(), EpicsModule],
 })
 export class StoreModule {
-  // constructor(
-  //   public store: NgRedux<AppState>,
-  //    ngReduxRouter: NgReduxRouter,
-  //    devTools: DevToolsExtension,
-  //    rootEpics: RootEpics
-  // )
-  // rootEpics: RootEpics
-
-  constructor(public store: NgRedux<fromRoot.State>, ngReduxRouter: NgReduxRouter, routerEpics: RouterEpics) {
-    const epics = combineEpics(routerEpics.getEpic());
-    const epicsEnhancers = createEpicMiddleware(epics);
-    store.provideStore(createStoreFactory(rootReducer, undefined, [epicsEnhancers]));
+  constructor(public store: NgRedux<fromRoot.State>, ngReduxRouter: NgReduxRouter, rootEpics: RootEpic) {
+    const epicsEnhancers = createEpicMiddleware(rootEpics.getEpic());
     // Tell Redux about our reducers and epics. If the Redux DevTools
     // chrome extension is available in the browser, tell Redux about
     // it too.
-    // store.configureStore(
-    //   rootReducer,
-    //   // {} as AppState,
-    //   // [createLogger(), ...rootEpics.createEpics()],
-    //   devTools.isEnabled() ? [devTools.enhancer()] : []
-    // );
+    store.provideStore(createStoreFactory(rootReducer, undefined, [epicsEnhancers]));
 
     // Enable syncing of Angular router state with our Redux store.
     if (ngReduxRouter) {
       ngReduxRouter.initialize();
     }
-
-    // Enable syncing of Angular form state with our Redux store.
-    // provideReduxForms(store);
   }
 }

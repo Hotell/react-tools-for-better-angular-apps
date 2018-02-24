@@ -6,9 +6,10 @@ import { Action } from 'redux';
 import { tap, map, ignoreElements } from 'rxjs/operators';
 
 import * as RouterActions from '../actions/router.action';
+import { EpicsService } from '../types';
 
 @Injectable()
-export class RouterEpics {
+export class RouterEpics implements EpicsService {
   constructor(private router: Router, private location: Location) {}
 
   getEpic() {

@@ -1,5 +1,8 @@
 import { createSelector } from 'reselect';
 import { combineReducers, ReducersMapObject } from 'redux';
+import { combineEpics } from 'redux-observable';
+
+import { EpicsService } from './types';
 
 const isString = (val: any): val is string => typeof val === 'string';
 
@@ -15,4 +18,9 @@ export function registerFeatureStore<T extends string>(id: T, reducers: Reducers
   return {
     [id]: combineReducers(reducers),
   };
+}
+
+export function createRootEpic(epics: EpicsService[]) {
+  const allEpics = epics.map((epic) => epic.getEpic());
+  return combineEpics(...allEpics);
 }
