@@ -26,12 +26,12 @@ export const ROUTES: Routes = [
       },
       {
         path: 'new',
-        //   canActivate: [fromGuards.PizzasGuard, fromGuards.ToppingsGuard],
+        canActivate: [fromGuards.PizzasGuard, fromGuards.ToppingsGuard],
         component: ProductItemComponent,
       },
       {
         path: ':pizzaId',
-        //   canActivate: [fromGuards.PizzaExistsGuards, fromGuards.ToppingsGuard],
+        canActivate: [fromGuards.PizzaExistsGuards, fromGuards.ToppingsGuard],
         component: ProductItemComponent,
       },
     ],
