@@ -49,6 +49,7 @@
     "@angular/platform-browser": "5.2.6",
     "@angular/platform-browser-dynamic": "5.2.6",
     "@angular/router": "5.2.6",
+    "axios": "0.18.0",
     "core-js": "2.5.3",
     "json-server": "0.12.1",
     "redux": "3.7.2",
