@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 
@@ -19,7 +20,7 @@ export const ROUTES: Routes = [
     children: [
       {
         path: '',
-        // canActivate: [fromGuards.PizzasGuard],
+        canActivate: [fromGuards.PizzasGuard],
         component: ProductsComponent,
       },
       {
@@ -37,7 +38,7 @@ export const ROUTES: Routes = [
 ];
 
 @NgModule({
-  imports: [CommonModule, ReactiveFormsModule, RouterModule.forChild(ROUTES)],
+  imports: [CommonModule, HttpClientModule, ReactiveFormsModule, RouterModule.forChild(ROUTES)],
   providers: [...fromServices.services, ...fromGuards.guards],
   declarations: [ProductsComponent, ProductItemComponent, ...fromComponents.components],
 })

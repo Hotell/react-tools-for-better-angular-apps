@@ -6,26 +6,27 @@ import { map, switchMap, catchError } from 'rxjs/operators';
 import { EpicsService } from '../../../store/types';
 
 // import * as fromRoot from '../../../store';
-// import * as pizzaActions from '../actions/pizzas.action';
-// import * as fromServices from '../../services';
+import * as pizzaActions from '../actions/pizzas.action';
+import * as fromServices from '../../services';
 
 @Injectable()
 export class PizzasEpics implements EpicsService {
   getEpic() {
-    return combineEpics();
+    return combineEpics(this.loadPizzas$);
   }
-  //   constructor(private actions$: Actions, private pizzaService: fromServices.PizzasService) {}
+  constructor(private pizzaService: fromServices.PizzasService) {}
   //   @Effect()
-  //   loadPizzas$ = this.actions$.ofType(pizzaActions.LOAD_PIZZAS).pipe(
-  //     switchMap(() => {
-  //       return this.pizzaService
-  //         .getPizzas()
-  //         .pipe(
-  //           map(pizzas => new pizzaActions.LoadPizzasSuccess(pizzas)),
-  //           catchError(error => of(new pizzaActions.LoadPizzasFail(error)))
-  //         );
-  //     })
-  //   );
+  loadPizzas$: Epic<any, {}> = (actions$) =>
+    actions$.ofType(pizzaActions.LOAD_PIZZAS).pipe(
+      switchMap(() => {
+        return this.pizzaService
+          .getPizzas()
+          .pipe(
+            map((pizzas) => new pizzaActions.LoadPizzasSuccess(pizzas)),
+            catchError((error) => of(new pizzaActions.LoadPizzasFail(error)))
+          );
+      })
+    );
   //   @Effect()
   //   createPizza$ = this.actions$.ofType(pizzaActions.CREATE_PIZZA).pipe(
   //     map((action: pizzaActions.CreatePizza) => action.payload),
