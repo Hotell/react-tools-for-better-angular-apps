@@ -42,7 +42,8 @@ h4 {
 
 @font-face {
   font-family: 'cornerstone';
-  src: url('../fonts/cornerstone.woff2') format('woff2'), url('../fonts/cornerstone.woff') format('woff');
+  src: url('../fonts/cornerstone.woff2') format('woff2'),
+    url('../fonts/cornerstone.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
