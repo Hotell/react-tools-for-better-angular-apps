@@ -31,10 +31,12 @@ export const getPizzasEntities = createSelector(getPizzaState, fromPizzas.getPiz
 //   });
 // };
 
+const getRouterState = (_: any) => _;
 export const getSelectedPizza = createSelector(
   getPizzasEntities,
+  getRouterState,
   // fromRoot.getRouterState,
-  fromRoot.getCurrentRoute,
+  // fromRoot.getCurrentRoute,
   (entities, router): Pizza => {
     return router.params && entities[router.params.pizzaId];
   }
