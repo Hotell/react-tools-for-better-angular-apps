@@ -14,14 +14,15 @@ const PIZZA_TOPPINGS_ACCESSOR = {
   selector: 'pizza-toppings',
   providers: [PIZZA_TOPPINGS_ACCESSOR],
   changeDetection: ChangeDetectionStrategy.OnPush,
-  styleUrls: ['pizza-toppings.component.scss'],
+  styleUrls: ['./pizza-toppings.component.scss'],
   template: `
     <div class="pizza-toppings">
       <div
         class="pizza-toppings-item"
         *ngFor="let topping of toppings;"
         (click)="selectTopping(topping)"
-        [class.active]="existsInToppings(topping)">
+        [class.active]="existsInToppings(topping)"
+      >
         <img src="/assets/img/toppings/singles/{{ topping.name }}.svg">
         {{ topping.name }}
       </div>

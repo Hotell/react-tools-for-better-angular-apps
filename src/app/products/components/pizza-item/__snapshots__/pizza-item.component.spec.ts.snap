@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PizzaItemComponent should display pizza toppings 1`] = `
+<pizza-item
+  pizza={[Function Object]}
+>
+  
+      <div
+    class="pizza-item"
+  >
+    
+        
+    <a
+      href="/products/undefined"
+      ng-reflect-router-link="/products,"
+    >
+      
+          
+      <pizza-display>
+        
+          
+      </pizza-display>
+      
+          
+      <h4>
+        
+      </h4>
+      
+          
+      <button
+        class="btn btn__ok"
+        type="button"
+      >
+        
+            View Pizza
+          
+      </button>
+      
+        
+    </a>
+    
+      
+  </div>
+    
+</pizza-item>
+`;

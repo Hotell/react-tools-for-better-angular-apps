@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PizzaToppingsComponent should display pizza toppings 1`] = `
+<pizza-toppings
+  toppings={[Function Array]}
+  value={[Function Array]}
+>
+  
+      <div
+    class="pizza-toppings"
+  >
+    
+        
+    
+    
+      
+  </div>
+    
+</pizza-toppings>
+`;

@@ -1,12 +1,14 @@
 import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
 
+import { Pizza } from '../../models';
+
 @Component({
   // tslint:disable-next-line:component-selector
   selector: 'pizza-item',
   changeDetection: ChangeDetectionStrategy.OnPush,
   styleUrls: ['pizza-item.component.scss'],
   template: `
-    <div class="pizza-item">
+    <div *ngIf="pizza" class="pizza-item">
       <a [routerLink]="['/products', pizza.id]">
         <pizza-display
           [pizza]="pizza">
@@ -20,5 +22,5 @@ import { Component, Input, Output, EventEmitter, ChangeDetectionStrategy } from 
   `,
 })
 export class PizzaItemComponent {
-  @Input() pizza: any;
+  @Input() pizza: Pizza = {};
 }

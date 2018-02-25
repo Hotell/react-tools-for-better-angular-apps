@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PizzaDisplayComponent should display pizza 1`] = `
+<pizza-display
+  pizza={[Function Object]}
+>
+  
+      <div
+    class="pizza-display"
+  >
+    
+        
+    <div
+      class="pizza-display__base"
+    >
+      
+          
+      <img
+        class="ng-tns-c1-0"
+        src="/assets/img/pizza.svg"
+      />
+      
+          
+      
+      
+        
+    </div>
+    
+      
+  </div>
+    
+</pizza-display>
+`;
+
+exports[`PizzaDisplayComponent should display pizza with toppings 1`] = `
+<pizza-display
+  pizza={[Function Object]}
+>
+  
+      <div
+    class="pizza-display"
+  >
+    
+        
+    <div
+      class="pizza-display__base"
+    >
+      
+          
+      <img
+        class="ng-tns-c2-0"
+        src="/assets/img/pizza.svg"
+      />
+      
+          
+      
+      
+        
+    </div>
+    
+      
+  </div>
+    
+</pizza-display>
+`;
