@@ -16,10 +16,7 @@ exports[`PizzaItemComponent should display pizza toppings 1`] = `
     >
       
           
-      <pizza-display>
-        
-          
-      </pizza-display>
+      <pizza-display />
       
           
       <h4>

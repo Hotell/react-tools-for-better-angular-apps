@@ -4,7 +4,7 @@ import { AppPage } from './app.po';
 
 const page = new AppPage();
 
-fixture('ro-sa App').beforeEach(async (t) => {
+fixture.skip('Pizza App').beforeEach(async (t) => {
   // await waitForAngular();
 });
 
