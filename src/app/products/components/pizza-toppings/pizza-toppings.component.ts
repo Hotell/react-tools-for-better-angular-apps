@@ -18,6 +18,7 @@ const PIZZA_TOPPINGS_ACCESSOR = {
   template: `
     <div class="pizza-toppings">
       <div
+        [attr.data-test]="topping.name"
         class="pizza-toppings-item"
         *ngFor="let topping of toppings;"
         (click)="selectTopping(topping)"

@@ -10,9 +10,7 @@ import { Pizza } from '../../models';
   template: `
     <div *ngIf="pizza" class="pizza-item">
       <a [routerLink]="['/products', pizza.id]">
-        <pizza-display
-          [pizza]="pizza">
-        </pizza-display>
+        <pizza-display [pizza]="pizza"></pizza-display>
         <h4>{{ pizza.name }}</h4>
         <button type="button" class="btn btn__ok">
           View Pizza
