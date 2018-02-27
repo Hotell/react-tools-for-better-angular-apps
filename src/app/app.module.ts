@@ -8,7 +8,6 @@ import { createLogger } from 'redux-logger';
 import { StoreModule } from './store';
 
 import { AppComponent } from './app.component';
-import { CounterComponent } from './counter.component';
 
 import { DemoModule } from './demo/demo.module';
 import { ProductsModule } from './products/products.module';
@@ -24,7 +23,7 @@ export const ROUTES: Routes = [
 ];
 
 @NgModule({
-  declarations: [AppComponent, CounterComponent],
+  declarations: [AppComponent],
   imports: [BrowserModule, DemoModule, ProductsModule, RouterModule.forRoot(ROUTES), StoreModule],
   bootstrap: [AppComponent],
 })

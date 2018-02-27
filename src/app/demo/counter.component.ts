@@ -2,7 +2,7 @@ import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
 import { select, NgRedux } from '@angular-redux/store';
 import { Observable } from 'rxjs/Observable';
 
-import * as fromRoot from './store';
+import * as fromRoot from '../store';
 
 @Component({
   selector: 'app-counter',
