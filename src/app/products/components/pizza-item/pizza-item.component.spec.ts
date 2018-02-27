@@ -1,28 +1,15 @@
+import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 
 import { Pizza, Topping } from '../../models';
+
 import { PizzaItemComponent } from './pizza-item.component';
-import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { pizzaMock } from './pizza-item.mocks';
 
 describe(`${PizzaItemComponent.name}`, () => {
   let component: PizzaItemComponent;
   let fixture: ComponentFixture<PizzaItemComponent>;
-  const toppingsMock: Topping[] = [
-    {
-      id: 1,
-      name: 'anchovy',
-    },
-    {
-      id: 2,
-      name: 'bacon',
-    },
-  ];
-  const pizzaMock: Pizza = {
-    id: 1,
-    name: 'Pepperoni pizza',
-    toppings: [],
-  };
 
   beforeEach(
     async(() => {
