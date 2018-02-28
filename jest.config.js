@@ -11,7 +11,7 @@ module.exports = {
     '^.+\\.(ts|js|html)$': '<rootDir>/node_modules/jest-preset-angular/preprocessor.js',
   },
   testRegex: '(/__tests__/.*|\\.(test|spec))\\.(ts|js)$',
-  moduleFileExtensions: ['ts', 'js', 'html'],
+  moduleFileExtensions: ['ts', 'js', 'html', 'json'],
   preset: 'jest-preset-angular',
   setupTestFrameworkScriptFile: '<rootDir>/src/setup-jest.ts',
   moduleNameMapper: {
@@ -20,10 +20,10 @@ module.exports = {
     //     'assets/(.*)': '<rootDir>/src/assets/$1',
     //     'environments/(.*)': '<rootDir>/src/environments/$1',
   },
-  //   transformIgnorePatterns: ['node_modules/(?!@ngrx)'],
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',
     '<rootDir>/src/.*(/__tests__/.*|\\.(test|spec))\\.(ts|tsx|js)$',
     'src/(setup-jest|jest-global-mocks).ts',
   ],
+  transformIgnorePatterns: ['node_modules/(?!@ngrx)'],
 };
