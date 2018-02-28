@@ -1,10 +1,9 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-// import { AnimationTriggerMetadata } from '@angular/animations';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfigureFn, configureTests } from '@modules/testing';
 
 import { PizzaDisplayComponent } from './pizza-display.component';
 import { Pizza, Topping } from '../../models';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { ConfigureFn, configureTests } from '../../../../modules/testing';
 
 describe(`${PizzaDisplayComponent.name}`, () => {
   let component: PizzaDisplayComponent;

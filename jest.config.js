@@ -14,11 +14,12 @@ module.exports = {
   moduleFileExtensions: ['ts', 'js', 'html'],
   preset: 'jest-preset-angular',
   setupTestFrameworkScriptFile: '<rootDir>/src/setup-jest.ts',
-  //   moduleNameMapper: {
-  //     'app/(.*)': '<rootDir>/src/app/$1',
-  //     'assets/(.*)': '<rootDir>/src/assets/$1',
-  //     'environments/(.*)': '<rootDir>/src/environments/$1',
-  //   },
+  moduleNameMapper: {
+    '@modules/(.*)': '<rootDir>/src/modules/$1',
+    //     'app/(.*)': '<rootDir>/src/app/$1',
+    //     'assets/(.*)': '<rootDir>/src/assets/$1',
+    //     'environments/(.*)': '<rootDir>/src/environments/$1',
+  },
   //   transformIgnorePatterns: ['node_modules/(?!@ngrx)'],
   coveragePathIgnorePatterns: [
     '<rootDir>/node_modules/',

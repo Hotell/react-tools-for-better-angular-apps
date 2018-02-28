@@ -1,9 +1,9 @@
 import { async, ComponentFixture, TestBed, getTestBed } from '@angular/core/testing';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { configureTests, ConfigureFn } from '@modules/testing';
 
 import { PizzaToppingsComponent } from './pizza-toppings.component';
 import { Pizza, Topping } from '../../models';
-import { configureTests, ConfigureFn } from './../../../../modules/testing';
 
 describe(`${PizzaToppingsComponent.name}`, () => {
   let component: PizzaToppingsComponent;
