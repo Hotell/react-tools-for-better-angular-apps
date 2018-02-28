@@ -1,0 +1,65 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`PizzaItemComponent should reflect toppings @Input() via *ngFor 1`] = `
+<pizza-item
+  name=""
+  toppings={[Function Array]}
+>
+  
+       <h3>
+    
+  </h3>
+      <ul>
+    
+  </ul>
+    
+</pizza-item>
+`;
+
+exports[`PizzaItemComponent should reflect toppings @Input() via *ngFor 2`] = `
+<pizza-item
+  name=""
+  toppings={[Function Array]}
+>
+  
+       <h3>
+    
+  </h3>
+      <ul>
+    
+  </ul>
+    
+</pizza-item>
+`;
+
+exports[`PizzaItemComponent should snapshot pizza name @Input 1`] = `
+<pizza-item
+  name={[Function String]}
+  toppings={[Function Array]}
+>
+  
+       <h3>
+    
+  </h3>
+      <ul>
+    
+  </ul>
+    
+</pizza-item>
+`;
+
+exports[`PizzaItemComponent should snapshot pizza name @Input 2`] = `
+<pizza-item
+  name={[Function String]}
+  toppings={[Function Array]}
+>
+  
+       <h3>
+    
+  </h3>
+      <ul>
+    
+  </ul>
+    
+</pizza-item>
+`;
