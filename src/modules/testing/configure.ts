@@ -1,11 +1,12 @@
 import { TestBed, getTestBed } from '@angular/core/testing';
 
-export type ConfigureFn = (testBed: TestBed) => void;
+export type ConfigureFn = (testBed: typeof TestBed) => void;
 export const configureTests = (configure: ConfigureFn) => {
   const compilerConfig = { preserveWhitespaces: false } as any;
-  const testBed = getTestBed();
 
-  testBed.configureCompiler(
+  // const testBed = getTestBed();
+
+  const configuredTestBed = TestBed.configureCompiler(
     compilerConfig
     /* {
     providers: [
@@ -14,7 +15,7 @@ export const configureTests = (configure: ConfigureFn) => {
   } */
   );
 
-  configure(testBed);
+  configure(configuredTestBed);
 
-  return testBed.compileComponents().then(() => testBed);
+  return configuredTestBed.compileComponents().then(() => configuredTestBed);
 };

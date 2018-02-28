@@ -1,6 +1,7 @@
 import { NO_ERRORS_SCHEMA } from '@angular/core';
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { configureTests, ConfigureFn } from '../../../../modules/testing';
 
 import { Pizza, Topping } from '../../models';
 
@@ -13,19 +14,21 @@ describe(`${PizzaItemComponent.name}`, () => {
 
   beforeEach(
     async(() => {
-      TestBed.configureTestingModule({
-        imports: [RouterTestingModule],
-        declarations: [PizzaItemComponent],
-        schemas: [NO_ERRORS_SCHEMA],
-      }).compileComponents();
+      const configure: ConfigureFn = (testBed) => {
+        testBed.configureTestingModule({
+          imports: [RouterTestingModule],
+          declarations: [PizzaItemComponent],
+          schemas: [NO_ERRORS_SCHEMA],
+        });
+      };
+
+      configureTests(configure).then((testBed) => {
+        fixture = testBed.createComponent(PizzaItemComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+      });
     })
   );
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PizzaItemComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

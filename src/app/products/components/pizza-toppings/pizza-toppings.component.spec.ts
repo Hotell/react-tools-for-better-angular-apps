@@ -1,8 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { async, ComponentFixture, TestBed, getTestBed } from '@angular/core/testing';
+import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 
 import { PizzaToppingsComponent } from './pizza-toppings.component';
 import { Pizza, Topping } from '../../models';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { configureTests, ConfigureFn } from './../../../../modules/testing';
 
 describe(`${PizzaToppingsComponent.name}`, () => {
   let component: PizzaToppingsComponent;
@@ -25,18 +26,20 @@ describe(`${PizzaToppingsComponent.name}`, () => {
 
   beforeEach(
     async(() => {
-      TestBed.configureTestingModule({
-        declarations: [PizzaToppingsComponent],
-        imports: [NoopAnimationsModule],
-      }).compileComponents();
+      const configure: ConfigureFn = (testBed) => {
+        testBed.configureTestingModule({
+          declarations: [PizzaToppingsComponent],
+          imports: [NoopAnimationsModule],
+        });
+      };
+
+      configureTests(configure).then((testBed) => {
+        fixture = testBed.createComponent(PizzaToppingsComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+      });
     })
   );
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PizzaToppingsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
 
   it('should create', () => {
     expect(component).toBeTruthy();

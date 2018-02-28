@@ -4,40 +4,24 @@ exports[`PizzaItemComponent should display pizza toppings 1`] = `
 <pizza-item
   pizza={[Function Object]}
 >
-  
-      <div
+  <div
     class="pizza-item"
   >
-    
-        
     <a
       href="/products/undefined"
       ng-reflect-router-link="/products,"
     >
-      
-          
       <pizza-display />
-      
-          
       <h4>
         
       </h4>
-      
-          
       <button
         class="btn btn__ok"
         type="button"
       >
-        
-            View Pizza
-          
+         View Pizza 
       </button>
-      
-        
     </a>
-    
-      
   </div>
-    
 </pizza-item>
 `;

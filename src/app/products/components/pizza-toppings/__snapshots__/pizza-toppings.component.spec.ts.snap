@@ -5,16 +5,10 @@ exports[`PizzaToppingsComponent should display pizza toppings 1`] = `
   toppings={[Function Array]}
   value={[Function Array]}
 >
-  
-      <div
+  <div
     class="pizza-toppings"
   >
     
-        
-    
-    
-      
   </div>
-    
 </pizza-toppings>
 `;

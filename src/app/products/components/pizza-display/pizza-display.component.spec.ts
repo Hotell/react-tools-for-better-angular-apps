@@ -4,6 +4,7 @@ import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 import { PizzaDisplayComponent } from './pizza-display.component';
 import { Pizza, Topping } from '../../models';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
+import { ConfigureFn, configureTests } from '../../../../modules/testing';
 
 describe(`${PizzaDisplayComponent.name}`, () => {
   let component: PizzaDisplayComponent;
@@ -26,18 +27,20 @@ describe(`${PizzaDisplayComponent.name}`, () => {
 
   beforeEach(
     async(() => {
-      TestBed.configureTestingModule({
-        declarations: [PizzaDisplayComponent],
-        imports: [NoopAnimationsModule],
-      }).compileComponents();
+      const configure: ConfigureFn = (testBed) => {
+        testBed.configureTestingModule({
+          declarations: [PizzaDisplayComponent],
+          imports: [NoopAnimationsModule],
+        });
+      };
+
+      configureTests(configure).then((testBed) => {
+        fixture = testBed.createComponent(PizzaDisplayComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+      });
     })
   );
-
-  beforeEach(() => {
-    fixture = TestBed.createComponent(PizzaDisplayComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
 
   it('should create', () => {
     expect(component).toBeTruthy();
