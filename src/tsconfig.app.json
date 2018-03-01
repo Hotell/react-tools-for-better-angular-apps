@@ -8,6 +8,7 @@
     "setup-jest.ts",
     "jest-global-mocks.ts",
     "**/*.spec.ts",
-    "**/*.stories.ts"
+    "**/*.stories.ts",
+    "stories"
   ]
 }
