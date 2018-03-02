@@ -1,19 +1,21 @@
-import { TestBed, getTestBed } from '@angular/core/testing';
+import { TestBed } from '@angular/core/testing';
 
+type CompilerOptions = Partial<{
+  providers: any[];
+  useJit: boolean;
+  preserveWhitespaces: boolean;
+}>;
 export type ConfigureFn = (testBed: typeof TestBed) => void;
-export const configureTests = (configure: ConfigureFn) => {
-  const compilerConfig = { preserveWhitespaces: false } as any;
+export const configureTests = (configure: ConfigureFn, compilerOptions: CompilerOptions = {}) => {
+  const compilerConfig: CompilerOptions = {
+    preserveWhitespaces: false,
+    // providers: [
+    //   {provide: ComponentFixtureAutoDetect, useValue: true},
+    // ],
+    ...compilerOptions,
+  };
 
-  // const testBed = getTestBed();
-
-  const configuredTestBed = TestBed.configureCompiler(
-    compilerConfig
-    /* {
-    providers: [
-      {provide: ComponentFixtureAutoDetect, useValue: true},
-    ]
-  } */
-  );
+  const configuredTestBed = TestBed.configureCompiler(compilerConfig);
 
   configure(configuredTestBed);
 
