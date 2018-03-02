@@ -6,6 +6,16 @@ import { ComponentFixture, async, TestBed } from '@angular/core/testing';
 
 @Component({
   // tslint:disable-next-line:component-selector
+  selector: 'test-wrapper',
+  template: `<pizza-item [name]="name" [toppings]="toppings"></pizza-item>`,
+})
+class TestWrapperComponent {
+  name: string;
+  toppings: string[];
+}
+
+@Component({
+  // tslint:disable-next-line:component-selector
   selector: 'pizza-item',
   template: `
      <h3>{{name}}</h3>
@@ -24,9 +34,11 @@ describe('PizzaItemComponent', () => {
 
   beforeEach(
     async(() => {
-      TestBed.configureTestingModule({
-        declarations: [PizzaItemComponent],
-      }).compileComponents();
+      TestBed.configureTestingModule({ declarations: [PizzaItemComponent] })
+        .overrideComponent(PizzaItemComponent, {
+          set: { changeDetection: ChangeDetectionStrategy.Default },
+        })
+        .compileComponents();
     })
   );
 

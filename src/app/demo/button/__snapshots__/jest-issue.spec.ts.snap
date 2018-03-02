@@ -11,6 +11,9 @@ exports[`PizzaItemComponent should reflect toppings @Input() via *ngFor 1`] = `
   </h3>
       <ul>
     
+    <li>
+      first
+    </li>
   </ul>
     
 </pizza-item>
@@ -27,6 +30,15 @@ exports[`PizzaItemComponent should reflect toppings @Input() via *ngFor 2`] = `
   </h3>
       <ul>
     
+    <li>
+      anchovy
+    </li>
+    <li>
+      tomato
+    </li>
+    <li>
+      chili
+    </li>
   </ul>
     
 </pizza-item>
@@ -55,7 +67,7 @@ exports[`PizzaItemComponent should snapshot pizza name @Input 2`] = `
 >
   
        <h3>
-    
+    Chilli pizza
   </h3>
       <ul>
     
