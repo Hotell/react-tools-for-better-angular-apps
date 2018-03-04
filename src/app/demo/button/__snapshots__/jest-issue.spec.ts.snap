@@ -6,14 +6,18 @@ exports[`PizzaItemComponent should reflect toppings @Input() via *ngFor 1`] = `
   toppings={[Function Array]}
 >
   
-       <h3>
+      <h3>
     
   </h3>
       <ul>
     
+        
+    
     <li>
       first
     </li>
+    
+      
   </ul>
     
 </pizza-item>
@@ -25,10 +29,12 @@ exports[`PizzaItemComponent should reflect toppings @Input() via *ngFor 2`] = `
   toppings={[Function Array]}
 >
   
-       <h3>
+      <h3>
     
   </h3>
       <ul>
+    
+        
     
     <li>
       anchovy
@@ -39,6 +45,8 @@ exports[`PizzaItemComponent should reflect toppings @Input() via *ngFor 2`] = `
     <li>
       chili
     </li>
+    
+      
   </ul>
     
 </pizza-item>
@@ -50,11 +58,15 @@ exports[`PizzaItemComponent should snapshot pizza name @Input 1`] = `
   toppings={[Function Array]}
 >
   
-       <h3>
+      <h3>
     
   </h3>
       <ul>
     
+        
+    
+    
+      
   </ul>
     
 </pizza-item>
@@ -66,11 +78,15 @@ exports[`PizzaItemComponent should snapshot pizza name @Input 2`] = `
   toppings={[Function Array]}
 >
   
-       <h3>
+      <h3>
     Chilli pizza
   </h3>
       <ul>
     
+        
+    
+    
+      
   </ul>
     
 </pizza-item>

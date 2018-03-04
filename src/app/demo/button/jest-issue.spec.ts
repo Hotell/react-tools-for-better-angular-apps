@@ -18,8 +18,10 @@ class TestWrapperComponent {
   // tslint:disable-next-line:component-selector
   selector: 'pizza-item',
   template: `
-     <h3>{{name}}</h3>
-    <ul><li *ngFor="let toppingName of toppings">{{toppingName}}</li></ul>
+    <h3>{{name}}</h3>
+    <ul>
+      <li *ngFor="let toppingName of toppings">{{toppingName}}</li>
+    </ul>
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
