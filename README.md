@@ -40,7 +40,7 @@ Run `yarn e2e:ci` to execute whole test suite in all browsers
 
 ## Running Storybook
 
-Run `yarn storybook` and go to `localhost:9009`
+Run `yarn storybook` and go to `localhost:6006`
 
 ## Reformat whole code
 
