@@ -1,3 +1,7 @@
+type ActionReturnFn = (...args: any[]) => void;
+type ActionFn = (name: string) => ActionReturnFn;
+type DecoratorFn = (args: any[]) => any[];
 declare module '@storybook/addon-actions' {
-  function action(...args: any[]): any;
+  const action: ActionFn;
+  const decorateAction: (decorators: DecoratorFn[]) => ActionFn;
 }

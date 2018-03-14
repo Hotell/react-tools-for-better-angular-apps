@@ -19,8 +19,8 @@
     "style": "yarn format && yarn lint",
     "verify": "yarn style && yarn jest --bail",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
-    "storybook": "start-storybook -p 9009 -s src/assets",
-    "storybook:build": "build-storybook  -o .storybook-out",
+    "storybook": "start-storybook -p 6006",
+    "storybook:build": "build-storybook",
     "commitmsg": "commitlint -e $GIT_PARAMS",
     "precommit": "lint-staged",
     "prepush": "yarn verify"
@@ -62,15 +62,6 @@
     "@angular/compiler-cli": "5.2.6",
     "@angular/language-service": "5.2.6",
     "@angularclass/hmr": "2.1.3",
-    "@storybook/addon-actions": "3.4.0-alpha.9",
-    "@storybook/addon-knobs": "3.4.0-alpha.9",
-    "@storybook/addon-links": "3.4.0-alpha.9",
-    "@storybook/addon-notes": "3.4.0-alpha.9",
-    "@storybook/addon-options": "3.4.0-alpha.9",
-    "@storybook/addon-storyshots": "3.4.0-alpha.9",
-    "@storybook/addon-storysource": "3.4.0-alpha.9",
-    "@storybook/addons": "3.4.0-alpha.9",
-    "@storybook/angular": "3.4.0-alpha.9",
     "@types/node": "~6.0.60",
     "@types/redux-logger": "3.0.5",
     "@types/webpack-env": "1.13.5",
@@ -89,6 +80,14 @@
     "testcafe-live": "0.1.3",
     "tslint": "5.9.1",
     "tslint-config-prettier": "1.9.0",
-    "typescript": "2.6.2"
+    "typescript": "2.6.2",
+    "@storybook/angular": "3.4.0-rc.2",
+    "@storybook/addon-notes": "3.4.0-rc.2",
+    "@storybook/addon-actions": "3.4.0-rc.2",
+    "@storybook/addon-links": "3.4.0-rc.2",
+    "@storybook/addon-storysource": "3.4.0-rc.2",
+    "@storybook/addon-knobs": "3.4.0-rc.2",
+    "@storybook/addon-options": "3.4.0-rc.2",
+    "@storybook/addons": "3.4.0-rc.2"
   }
 }
