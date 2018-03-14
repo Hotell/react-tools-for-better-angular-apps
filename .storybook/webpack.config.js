@@ -1,15 +1,13 @@
 const path = require('path');
 
 module.exports = (baseConfig) => {
-  const preLoader = {
+  const storysourceLoader = {
     test: [/\.stories\.tsx?$/, /index\.ts$/],
     loaders: [require.resolve('@storybook/addon-storysource/loader')],
     include: [path.resolve(__dirname, '../src')],
     enforce: 'pre',
   };
-
-  // @FIXME doesn't compile !
-  // baseConfig.module.rules.push(preLoader);
+  baseConfig.module.rules.push(storysourceLoader);
 
   return baseConfig;
 };
