@@ -11,6 +11,7 @@ if (environment.hmr) {
   if (module.hot) {
     hmrBootstrap(module, bootstrap);
   } else {
+    // tslint:disable:no-console
     console.error('HMR is not enabled for webpack-dev-server!');
     console.log('Are you using the --hmr flag for ng serve?');
   }

@@ -1,4 +1,4 @@
-import { NgModuleRef, ApplicationRef } from '@angular/core';
+import { ApplicationRef, NgModuleRef } from '@angular/core';
 import { createNewHosts } from '@angularclass/hmr';
 
 export const hmrBootstrap = (module: NodeModule, bootstrap: () => Promise<NgModuleRef<any>>) => {
