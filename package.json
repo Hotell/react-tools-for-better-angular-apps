@@ -28,9 +28,15 @@
     "prepush": "yarn verify"
   },
   "commitlint": {
-    "extends": ["@commitlint/config-conventional"],
+    "extends": [
+      "@commitlint/config-conventional"
+    ],
     "rules": {
-      "header-max-length": [2, "always", 100]
+      "header-max-length": [
+        2,
+        "always",
+        100
+      ]
     }
   },
   "lint-staged": {
@@ -89,6 +95,7 @@
     "testcafe-live": "0.1.3",
     "tslint": "5.9.1",
     "tslint-config-prettier": "1.10.0",
+    "tslint-config-standard": "7.0.0",
     "typescript": "2.6.2"
   }
 }
