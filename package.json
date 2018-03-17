@@ -2,6 +2,9 @@
   "name": "@hotell/better-cli-defaults",
   "version": "0.1.0",
   "license": "MIT",
+  "engines": {
+    "node": ">=8.0.0"
+  },
   "scripts": {
     "start": "concurrently --kill-others \"yarn serve:api -q\" \"yarn serve:ui\"",
     "start:hmr": "concurrently --kill-others \"yarn serve:api -q\" \"yarn serve:ui:hmr\"",
@@ -14,7 +17,7 @@
     "e2e": "testcafe-live chrome e2e/**/*.e2e-spec.ts",
     "e2e:ci": "testcafe all e2e/**/*.e2e-spec.ts --app 'yarn start' --app-init-delay 4000",
     "lint": "ng lint --format codeFrame --fix",
-    "format": "prettier {src,e2e}/**/* --write",
+    "format": "prettier {src,e2e}/**/*.{ts,tsx,json,md,scss,css,less} --write",
     "style": "yarn format && yarn lint",
     "verify": "yarn style && jest --bail",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
@@ -29,31 +32,30 @@
       "yarn lint",
       "git add"
     ],
-    "{src,e2e}/**/*.{js,jsx,ts,tsx,css,scss,md}": [
+    "{src,e2e}/**/*.{js,jsx,ts,tsx,css,scss,less,md}": [
       "prettier --write",
       "git add"
     ]
   },
   "private": true,
   "dependencies": {
-    "@angular/animations": "5.2.8",
-    "@angular/common": "5.2.8",
-    "@angular/compiler": "5.2.8",
-    "@angular/core": "5.2.8",
-    "@angular/forms": "5.2.8",
-    "@angular/http": "5.2.8",
-    "@angular/platform-browser": "5.2.8",
-    "@angular/platform-browser-dynamic": "5.2.8",
-    "@angular/router": "5.2.8",
+    "@angular/animations": "5.2.9",
+    "@angular/common": "5.2.9",
+    "@angular/compiler": "5.2.9",
+    "@angular/core": "5.2.9",
+    "@angular/forms": "5.2.9",
+    "@angular/http": "5.2.9",
+    "@angular/platform-browser": "5.2.9",
+    "@angular/platform-browser-dynamic": "5.2.9",
+    "@angular/router": "5.2.9",
     "core-js": "2.5.3",
-    "json-server": "0.12.1",
     "rxjs": "^5.5.7",
     "zone.js": "0.8.20"
   },
   "devDependencies": {
     "@angular/cli": "1.7.3",
-    "@angular/compiler-cli": "5.2.8",
-    "@angular/language-service": "5.2.8",
+    "@angular/compiler-cli": "5.2.9",
+    "@angular/language-service": "5.2.9",
     "@angularclass/hmr": "2.1.3",
     "@storybook/addon-actions": "3.4.0-rc.2",
     "@storybook/addon-knobs": "3.4.0-rc.2",
@@ -63,7 +65,7 @@
     "@storybook/addon-storysource": "3.4.0-rc.2",
     "@storybook/addons": "3.4.0-rc.2",
     "@storybook/angular": "3.4.0-rc.2",
-    "@types/node": "~6.0.60",
+    "@types/node": "8.9.5",
     "@types/webpack-env": "1.13.5",
     "babel-core": "6.26.0",
     "codelyzer": "4.2.1",
@@ -72,6 +74,7 @@
     "husky": "0.14.3",
     "jest": "22.4.2",
     "jest-preset-angular": "5.2.1",
+    "json-server": "0.12.1",
     "lint-staged": "7.0.0",
     "prettier": "1.11.1",
     "testcafe": "0.19.1",
