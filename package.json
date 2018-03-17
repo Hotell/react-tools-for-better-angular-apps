@@ -1,6 +1,6 @@
 {
-  "name": "@hotell/better-cli-defaults",
-  "version": "0.1.0",
+  "name": "@martin_hotell/better-cli-defaults",
+  "version": "0.2.0",
   "license": "MIT",
   "engines": {
     "node": ">=8.0.0"
