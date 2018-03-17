@@ -19,7 +19,7 @@
     "lint": "ng lint --format codeFrame --fix",
     "format": "prettier {src,e2e}/**/*.{ts,tsx,json,md,scss,css,less} --write",
     "style": "yarn format && yarn lint",
-    "verify": "yarn style && jest --bail",
+    "verify": "yarn format -l && yarn lint && jest --bail",
     "tslint-check": "tslint-config-prettier-check ./tslint.json",
     "storybook": "start-storybook -p 6006",
     "storybook:build": "build-storybook",
