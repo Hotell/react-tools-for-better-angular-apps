@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TitleComponent should create 1`] = `
+<app-title
+  title={[Function String]}
+  user={[Function String]}
+  userService={[Function UserService]}
+>
+  
+      <h1>
+    
+        Welcome to Unknown app!
+      
+  </h1>
+    
+</app-title>
+`;
