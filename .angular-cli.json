@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/cli/lib/config/schema.json",
   "project": {
-    "name": "ro-sa"
+    "name": "@martin_hotell/better-cli-defaults"
   },
   "apps": [
     {
@@ -43,15 +43,18 @@
     {
       "project": "e2e/tsconfig.e2e.json",
       "exclude": "**/node_modules/**"
+    },
+    {
+      "project": ".storybook/tsconfig.storybook.json",
+      "exclude": "**/node_modules/**"
     }
   ],
   "test": {},
   "defaults": {
     "styleExt": "css",
+    "lintFix": true,
     "component": {
-      "inlineStyle": true,
       "inlineTemplate": true,
-      "flat": true,
       "changeDetection": "OnPush"
     }
   }
