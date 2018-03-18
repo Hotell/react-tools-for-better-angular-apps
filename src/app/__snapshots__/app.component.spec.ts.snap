@@ -11,12 +11,18 @@ exports[`AppComponent should create the app 1`] = `
   >
     
         
-    <h1
+    <app-title
       _ngcontent-c0=""
     >
       
-          Welcome to 
-    </h1>
+      
+      <h1>
+        
+        Welcome to 
+      </h1>
+      
+    
+    </app-title>
     
         
     <img
@@ -132,13 +138,20 @@ exports[`AppComponent should render title in a h1 tag 1`] = `
   >
     
         
-    <h1
+    <app-title
       _ngcontent-c2=""
+      ng-reflect-title="app"
     >
       
-          Welcome to app!
+      
+      <h1>
         
-    </h1>
+        Welcome to app!
+      
+      </h1>
+      
+    
+    </app-title>
     
         
     <img

@@ -1,10 +1,21 @@
+import { NgModule } from '@angular/core';
 import { async, TestBed } from '@angular/core/testing';
+
 import { AppComponent } from './app.component';
+
+import { PROVIDERS } from './core';
+import { TitleComponent } from './core/components';
+
+const moduleMocks: NgModule = {
+  declarations: [TitleComponent],
+  providers: [PROVIDERS],
+};
 describe('AppComponent', () => {
   beforeEach(
     async(() => {
       TestBed.configureTestingModule({
-        declarations: [AppComponent],
+        declarations: [AppComponent, moduleMocks.declarations],
+        providers: moduleMocks.providers,
       }).compileComponents();
     })
   );
