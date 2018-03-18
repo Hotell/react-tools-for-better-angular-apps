@@ -2,6 +2,10 @@
 const jestConfig = {
   preset: 'jest-preset-angular',
   setupTestFrameworkScriptFile: '<rootDir>/src/setup-jest.ts',
+  testMatch: [
+    '<rootDir>/src/**/__tests__/**/*.+(ts|js)?(x)',
+    '<rootDir>/src/**/+(*.)+(spec|test).+(ts|js)?(x)',
+  ],
   //  // moduleNameMapper: {
   // //     'app/(.*)': '<rootDir>/src/app/$1',
   // //     'assets/(.*)': '<rootDir>/src/assets/$1',
