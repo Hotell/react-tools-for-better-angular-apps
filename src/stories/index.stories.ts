@@ -1,9 +1,9 @@
-import { storiesOf } from '@storybook/angular';
-import { withNotes } from '@storybook/addon-notes';
 import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
+import { withNotes } from '@storybook/addon-notes';
+import { storiesOf } from '@storybook/angular';
 
-import { Welcome, Button } from '@storybook/angular/demo';
+import { Button, Welcome } from '@storybook/angular/demo';
 
 storiesOf('Welcome', module).add('to Storybook', () => ({
   component: Welcome,
