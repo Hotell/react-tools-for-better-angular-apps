@@ -9,6 +9,7 @@
     // @override: tslint:recommended / tslint-config-standard
     "object-literal-sort-keys": false,
     "no-floating-promises": false,
+    "no-empty": false,
 
     // @core: code rules
     "deprecation": {
