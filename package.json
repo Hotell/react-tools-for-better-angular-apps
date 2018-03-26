@@ -61,7 +61,7 @@
     "@angular/platform-browser-dynamic": "5.2.9",
     "@angular/router": "5.2.9",
     "core-js": "2.5.3",
-    "rxjs": "^5.5.7",
+    "rxjs": "5.5.7",
     "zone.js": "0.8.20"
   },
   "devDependencies": {
@@ -85,7 +85,7 @@
     "codelyzer": "4.2.1",
     "concurrently": "3.5.1",
     "husky": "0.14.3",
-    "jest": "22.4.2",
+    "jest": "22.4.3",
     "jest-preset-angular": "5.2.1",
     "json-server": "0.12.1",
     "lint-staged": "7.0.0",
