@@ -35,10 +35,10 @@ declare module '@storybook/addon-knobs/angular' {
   const withKnobs: WithKnob;
   const withKnobsOptions: (options?: Partial<WithKnobOptions>) => WithKnob;
   const text: KnobFn<string>;
-  const number: KnobFn<number> | KnobNumberRangeFn;
+  const number: KnobFn<number> | KnobNumberRangeFn<number>;
   const boolean: KnobFn<boolean>;
   const object: KnobFn<object>;
-  const array: KnobArrayFn;
+  const array: KnobArrayFn<any[]>;
   const select: KnobFn;
   const color: KnobFn;
   const date: KnobFn<Date>;
