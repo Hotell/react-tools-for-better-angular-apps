@@ -1,12 +1,8 @@
-// import { waitForAngular } from 'testcafe-angular-selectors';
-
 import { AppPage } from './app.po';
 
 const page = new AppPage();
 
-fixture('ro-sa App').beforeEach(async (t) => {
-  // await waitForAngular();
-});
+fixture('App').beforeEach(async (t) => {});
 
 test('should display welcome message', async (t) => {
   await page.navigateTo();

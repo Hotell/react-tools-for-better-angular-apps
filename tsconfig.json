@@ -13,12 +13,8 @@
       "types",
       "node_modules/@types",
     ],
-    "baseUrl": "./",
-    "paths": {
-      "testcafe-angular-selectors": [
-        "types/testcafe-angular-selectors"
-      ]
-    },
+    "baseUrl": ".",
+    "paths": {},
     "lib": [
       "es2017",
       "dom"
