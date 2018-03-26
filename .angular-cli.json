@@ -30,7 +30,8 @@
       }
     }
   ],
-  "e2e": {},
+  "e2e": {
+  },
   "lint": [
     {
       "project": "src/tsconfig.app.json",
@@ -49,7 +50,8 @@
       "exclude": "**/node_modules/**"
     }
   ],
-  "test": {},
+  "test": {
+  },
   "defaults": {
     "styleExt": "css",
     "lintFix": true,
@@ -57,5 +59,8 @@
       "inlineTemplate": true,
       "changeDetection": "OnPush"
     }
+  },
+  "warnings": {
+    "typescriptMismatch": false
   }
 }
