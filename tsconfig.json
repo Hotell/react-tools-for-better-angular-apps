@@ -9,10 +9,6 @@
     "experimentalDecorators": true,
     "target": "es5",
     "skipLibCheck": true,
-    "typeRoots": [
-      "types",
-      "node_modules/@types",
-    ],
     "baseUrl": ".",
     "paths": {},
     "lib": [
