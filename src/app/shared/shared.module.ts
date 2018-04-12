@@ -8,6 +8,6 @@ import { PIPES } from './pipes';
 @NgModule({
   imports: [CommonModule],
   declarations: [COMPONENTS, DIRECTIVES, PIPES],
-  exports: [COMPONENTS, DIRECTIVES, PIPES],
+  exports: [CommonModule, COMPONENTS, DIRECTIVES, PIPES],
 })
 export class SharedModule {}
