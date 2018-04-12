@@ -33,9 +33,9 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/cli@1.7.3":
-  version "1.7.3"
-  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.7.3.tgz#ac917b69240bb1b340421e9f985135890e0d53b4"
+"@angular/cli@1.7.4":
+  version "1.7.4"
+  resolved "https://registry.yarnpkg.com/@angular/cli/-/cli-1.7.4.tgz#b6c31b5fc6f8ea07e55b1b01a26422f5358a4ea6"
   dependencies:
     "@angular-devkit/build-optimizer" "0.3.2"
     "@angular-devkit/core" "0.3.2"
@@ -342,11 +342,11 @@
     semver "^5.3.0"
     semver-intersect "^1.1.2"
 
-"@storybook/addon-actions@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.4.0-rc.3.tgz#783a153b61dfcb8aee89a6c67a1d383d10afed51"
+"@storybook/addon-actions@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.4.1.tgz#6ec5dc337e4af301d2f0f8fbc0ad2dee812cfa29"
   dependencies:
-    "@storybook/components" "3.4.0-rc.3"
+    "@storybook/components" "3.4.1"
     babel-runtime "^6.26.0"
     deep-equal "^1.0.1"
     glamor "^2.20.40"
@@ -357,11 +357,11 @@
     react-inspector "^2.2.2"
     uuid "^3.2.1"
 
-"@storybook/addon-knobs@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-3.4.0-rc.3.tgz#07cd5be49b2091524f127c729461af795747b02d"
+"@storybook/addon-knobs@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-knobs/-/addon-knobs-3.4.1.tgz#9c23abf62944280d2d681f0a356fea67683a892f"
   dependencies:
-    "@storybook/components" "3.4.0-rc.3"
+    "@storybook/components" "3.4.1"
     babel-runtime "^6.26.0"
     deep-equal "^1.0.1"
     global "^4.3.2"
@@ -374,35 +374,35 @@
     react-textarea-autosize "^5.2.1"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-links@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.4.0-rc.3.tgz#a90e03c6c68ded04300e315f13925322140caee2"
+"@storybook/addon-links@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-links/-/addon-links-3.4.1.tgz#b5c5e942b8865b2489d8d1537699316d0b154b1b"
   dependencies:
-    "@storybook/components" "3.4.0-rc.3"
+    "@storybook/components" "3.4.1"
     babel-runtime "^6.26.0"
     global "^4.3.2"
     prop-types "^15.6.1"
 
-"@storybook/addon-notes@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-3.4.0-rc.3.tgz#1222873ca21eb439de67858b734e9b5b559091f5"
+"@storybook/addon-notes@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-notes/-/addon-notes-3.4.1.tgz#a1bdea913dd4f209b2d0dfdda2cd0fdd13132583"
   dependencies:
     babel-runtime "^6.26.0"
     marked "^0.3.17"
     prop-types "^15.6.1"
     util-deprecate "^1.0.2"
 
-"@storybook/addon-options@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.4.0-rc.3.tgz#8c2f3f87f88967c39e73303d77af4eda94e3980d"
+"@storybook/addon-options@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-options/-/addon-options-3.4.1.tgz#309f46c298b110442824b066e73df6dee17fc8b9"
   dependencies:
     babel-runtime "^6.26.0"
 
-"@storybook/addon-storysource@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-3.4.0-rc.3.tgz#97a28f9b950596468d38547f42c7ba12a83b90b0"
+"@storybook/addon-storysource@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addon-storysource/-/addon-storysource-3.4.1.tgz#11b6c7ef9ef40b17a5901ca2bc296af2e7ccd4ea"
   dependencies:
-    "@storybook/components" "3.4.0-rc.3"
+    "@storybook/components" "3.4.1"
     acorn "^5.5.3"
     acorn-es7 "^0.1.0"
     acorn-jsx "^4.1.1"
@@ -414,19 +414,19 @@
     prop-types "^15.6.1"
     react-syntax-highlighter "^7.0.2"
 
-"@storybook/addons@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.4.0-rc.3.tgz#8c17104a87e0fc4f67fee670b53d9c4acd723de2"
+"@storybook/addons@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/addons/-/addons-3.4.1.tgz#ff80dc65a87607681b811a8cc4ff92124643f5ac"
 
-"@storybook/angular@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/angular/-/angular-3.4.0-rc.3.tgz#98ad3f781e39e67d7172608608fc0bf176d4e582"
+"@storybook/angular@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/angular/-/angular-3.4.1.tgz#42b9334d861926615fdad1b2d163511580a0fb75"
   dependencies:
-    "@storybook/addons" "3.4.0-rc.3"
-    "@storybook/channel-postmessage" "3.4.0-rc.3"
-    "@storybook/core" "3.4.0-rc.3"
-    "@storybook/node-logger" "3.4.0-rc.3"
-    "@storybook/ui" "3.4.0-rc.3"
+    "@storybook/addons" "3.4.1"
+    "@storybook/channel-postmessage" "3.4.1"
+    "@storybook/core" "3.4.1"
+    "@storybook/node-logger" "3.4.1"
+    "@storybook/ui" "3.4.1"
     airbnb-js-shims "^1.4.1"
     angular2-template-loader "^0.6.2"
     babel-loader "^7.1.4"
@@ -457,39 +457,39 @@
     webpack-hot-middleware "^2.21.2"
     zone.js "^0.8.20"
 
-"@storybook/channel-postmessage@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-3.4.0-rc.3.tgz#2863f8ad10d43718e58dc0657a209a4685c7c2af"
+"@storybook/channel-postmessage@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/channel-postmessage/-/channel-postmessage-3.4.1.tgz#17a84b8df1613196554f0450733a0b13d0954907"
   dependencies:
-    "@storybook/channels" "3.4.0-rc.3"
+    "@storybook/channels" "3.4.1"
     global "^4.3.2"
     json-stringify-safe "^5.0.1"
 
-"@storybook/channels@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.4.0-rc.3.tgz#4c5cd841d50ebb35bee25b3b085f18f421348d33"
+"@storybook/channels@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/channels/-/channels-3.4.1.tgz#13536c0211f0b49d24b63c5e7cef87b11ae43f85"
 
-"@storybook/client-logger@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.4.0-rc.3.tgz#747f61c7f8d337f5ce502e0c93a27327a21fd904"
+"@storybook/client-logger@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/client-logger/-/client-logger-3.4.1.tgz#5b24ea0fa105f0683a5e9797a41466e4267d2c7f"
 
-"@storybook/components@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.4.0-rc.3.tgz#b8a0d188b54f5a4f6cc2b3c9f45b0ca590c627f1"
+"@storybook/components@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/components/-/components-3.4.1.tgz#74e3bcf9590cb314a4845d2f3264aada79856c1f"
   dependencies:
     glamor "^2.20.40"
     glamorous "^4.12.1"
     prop-types "^15.6.1"
 
-"@storybook/core@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/core/-/core-3.4.0-rc.3.tgz#69e0c0f0df9d15f8468166b9f3ee19d2ae41d7be"
+"@storybook/core@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/core/-/core-3.4.1.tgz#5ddbe754faa95c48ba272cfa30ca2e3272481aeb"
   dependencies:
-    "@storybook/addons" "3.4.0-rc.3"
-    "@storybook/channel-postmessage" "3.4.0-rc.3"
-    "@storybook/client-logger" "3.4.0-rc.3"
-    "@storybook/node-logger" "3.4.0-rc.3"
-    "@storybook/ui" "3.4.0-rc.3"
+    "@storybook/addons" "3.4.1"
+    "@storybook/channel-postmessage" "3.4.1"
+    "@storybook/client-logger" "3.4.1"
+    "@storybook/node-logger" "3.4.1"
+    "@storybook/ui" "3.4.1"
     autoprefixer "^7.2.6"
     babel-runtime "^6.26.0"
     chalk "^2.3.2"
@@ -505,8 +505,6 @@
     postcss-loader "^2.1.2"
     prop-types "^15.6.1"
     qs "^6.5.1"
-    react "^16.0.0"
-    react-dom "^16.0.0"
     serve-favicon "^2.4.5"
     shelljs "^0.8.1"
     style-loader "^0.20.3"
@@ -523,9 +521,9 @@
     "@storybook/react-simple-di" "^1.2.1"
     babel-runtime "6.x.x"
 
-"@storybook/node-logger@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-3.4.0-rc.3.tgz#39600631be7204cb1c3c813dfa723bb0340427b1"
+"@storybook/node-logger@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/node-logger/-/node-logger-3.4.1.tgz#d1bddbaa5bcf995b97d408e46c1c2125d04b6e58"
   dependencies:
     npmlog "^4.1.2"
 
@@ -561,11 +559,11 @@
   dependencies:
     babel-runtime "^6.5.0"
 
-"@storybook/ui@3.4.0-rc.3":
-  version "3.4.0-rc.3"
-  resolved "https://registry.yarnpkg.com/@storybook/ui/-/ui-3.4.0-rc.3.tgz#3f0e8ea3cf5ad154c3dac5c15e54f8027297ce0e"
+"@storybook/ui@3.4.1":
+  version "3.4.1"
+  resolved "https://registry.yarnpkg.com/@storybook/ui/-/ui-3.4.1.tgz#2f0109d806d7922e45b7f4dea67584d61536df46"
   dependencies:
-    "@storybook/components" "3.4.0-rc.3"
+    "@storybook/components" "3.4.1"
     "@storybook/mantra-core" "^1.7.2"
     "@storybook/podda" "^1.2.3"
     "@storybook/react-komposer" "^2.0.3"
@@ -2770,13 +2768,17 @@ copy-webpack-plugin@~4.4.1:
     p-limit "^1.0.0"
     serialize-javascript "^1.4.0"
 
-core-js@2.5.3, core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0:
-  version "2.5.3"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.3.tgz#8acc38345824f16d8365b7c9b4259168e8ed603e"
+core-js@2.5.5:
+  version "2.5.5"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.5.tgz#b14dde936c640c0579a6b50cabcc132dd6127e3b"
 
 core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
+
+core-js@^2.4.0, core-js@^2.4.1, core-js@^2.5.0:
+  version "2.5.3"
+  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.5.3.tgz#8acc38345824f16d8365b7c9b4259168e8ed603e"
 
 core-object@^3.1.0:
   version "3.1.5"
@@ -6046,9 +6048,9 @@ license-webpack-plugin@^1.0.0:
   dependencies:
     ejs "^2.5.7"
 
-lint-staged@7.0.0:
-  version "7.0.0"
-  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-7.0.0.tgz#57926c63201e7bd38ca0576d74391efa699b4a9d"
+lint-staged@7.0.4:
+  version "7.0.4"
+  resolved "https://registry.yarnpkg.com/lint-staged/-/lint-staged-7.0.4.tgz#1aa7f27427e4c4c85d4d6524ac98aac10cbaf1b8"
   dependencies:
     app-root-path "^2.0.1"
     chalk "^2.3.1"
@@ -6069,7 +6071,8 @@ lint-staged@7.0.0:
     path-is-inside "^1.0.2"
     pify "^3.0.0"
     please-upgrade-node "^3.0.1"
-    staged-git-files "1.1.0"
+    staged-git-files "1.1.1"
+    string-argv "^0.0.2"
     stringify-object "^3.2.2"
 
 linux-platform-info@^0.0.3:
@@ -7791,7 +7794,11 @@ preserve@^0.2.0:
   version "0.2.0"
   resolved "https://registry.yarnpkg.com/preserve/-/preserve-0.2.0.tgz#815ed1f6ebc65926f865b310c0713bcb3315ce4b"
 
-prettier@1.11.1, prettier@^1.11.1:
+prettier@1.12.0:
+  version "1.12.0"
+  resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.12.0.tgz#d26fc5894b9230de97629b39cae225b503724ce8"
+
+prettier@^1.11.1:
   version "1.11.1"
   resolved "https://registry.yarnpkg.com/prettier/-/prettier-1.11.1.tgz#61e43fc4cd44e68f2b0dfc2c38cd4bb0fccdcc75"
 
@@ -8719,7 +8726,13 @@ rx@2.3.24:
   version "2.3.24"
   resolved "https://registry.yarnpkg.com/rx/-/rx-2.3.24.tgz#14f950a4217d7e35daa71bbcbe58eff68ea4b2b7"
 
-rxjs@5.5.7, rxjs@^5.4.2, rxjs@^5.5.6:
+rxjs@5.5.9:
+  version "5.5.9"
+  resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.9.tgz#12a0487794b00f5eb370fec2751bd973a89886fb"
+  dependencies:
+    symbol-observable "1.0.1"
+
+rxjs@^5.4.2, rxjs@^5.5.6:
   version "5.5.7"
   resolved "https://registry.yarnpkg.com/rxjs/-/rxjs-5.5.7.tgz#afb3d1642b069b2fbf203903d6501d1acb4cda27"
   dependencies:
@@ -9240,9 +9253,9 @@ stackframe@^0.3.1:
   version "0.3.1"
   resolved "https://registry.yarnpkg.com/stackframe/-/stackframe-0.3.1.tgz#33aa84f1177a5548c8935533cbfeb3420975f5a4"
 
-staged-git-files@1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/staged-git-files/-/staged-git-files-1.1.0.tgz#1a9bb131c1885601023c7aaddd3d54c22142c526"
+staged-git-files@1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/staged-git-files/-/staged-git-files-1.1.1.tgz#37c2218ef0d6d26178b1310719309a16a59f8f7b"
 
 static-extend@^0.1.1:
   version "0.1.2"
@@ -9308,6 +9321,10 @@ stream-to-observable@^0.2.0:
 strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
+
+string-argv@^0.0.2:
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/string-argv/-/string-argv-0.0.2.tgz#dac30408690c21f3c3630a3ff3a05877bdcbd736"
 
 string-length@^2.0.0:
   version "2.0.0"
@@ -10743,6 +10760,10 @@ yargs@~3.10.0:
     decamelize "^1.0.0"
     window-size "0.1.0"
 
-zone.js@0.8.20, zone.js@^0.8.20:
+zone.js@0.8.26:
+  version "0.8.26"
+  resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.26.tgz#7bdd72f7668c5a7ad6b118148b4ea39c59d08d2d"
+
+zone.js@^0.8.20:
   version "0.8.20"
   resolved "https://registry.yarnpkg.com/zone.js/-/zone.js-0.8.20.tgz#a218c48db09464b19ff6fc8f0d4bb5b1046e185d"
